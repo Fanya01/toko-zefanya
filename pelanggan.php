@@ -33,9 +33,9 @@ $query = mysqli_query($koneksi, $sql);
 		<?php while ($pelanggan = mysqli_fetch_array($query)) : ?>
 			<tr>
 				<td><?= $i ?></td>
-				<td><?= $pelanggan["namapelanggan"] ?></td>
-				<td><?= $pelanggan["alamat"] ?></td>
-				<td><?= $pelanggan["nomortelepon"] ?></td>
+				<td><?= $pelanggan["NamaPelanggan"] ?></td>
+				<td><?= $pelanggan["Alamat"] ?></td>
+				<td><?= $pelanggan["NomorTelepon"] ?></td>
 				<td>
 					<form action="read-pelanggan.php" method="GET">
 						<input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>

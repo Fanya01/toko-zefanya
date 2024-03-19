@@ -12,7 +12,7 @@
 
 	require "koneksi.php";
 
-	$sql = "SELECT penjualan.id, barang.nama, penjualan.jumlah, penjualan.total_harga, usser.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+	$sql = "SELECT penjualan.id, barang.nama, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
 	$query = mysqli_query($koneksi, $sql);
 	?>
 

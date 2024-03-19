@@ -10,14 +10,14 @@
 
 	<?php
 	if ($_SESSION["level"] != "admin") {
-		echo "Anda tidak dapat mengakses halaman ini";/
+		echo "Anda tidak dapat mengakses halaman ini";
 		exit;
 	}
 
 	require "koneksi.php";
-he
+
 	$sql = "SELECT * FROM user";
-	$query = mysql_query($konesi, $sql);
+	$query = mysqli_query($koneksi, $sql);
 	?>
 
 	<div>
@@ -41,8 +41,8 @@ he
 					<td><?= $i ?></td>
 					<td><?= $user["username"] ?></td>
 					<td><?= $user["level"] ?></td>
-					<td><?= $user["create_at"] ?></td>
-					<td><?= $user["update_at"] ?></td>
+					<td><?= $user["created_at"] ?></td>
+					<td><?= $user["updated_at"] ?></td>
 					<td>
 						<form action="read-user.php" method="GET">
 							<input type="hidden" name="id" value='<?= $user["id"] ?>'>
@@ -60,14 +60,15 @@ he
 			<?php endwhile ?>
 		</table>
 	</div>
-	
+
 	<script>
-		function konfirmasi(form){
-			formdata = new FormData(form);
-			id = formData,get("id");
-			return confirm('Hapus user '${id}'?');
-		}
+    function konfirmasi(form){
+        formData = new FormData(form);
+        id = formData.get("id");
+        return confirm('Hapus user ' + id + '?');
+    }
 	</script>
+
 </body>
 
 </html>

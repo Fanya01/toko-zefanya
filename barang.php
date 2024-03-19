@@ -42,7 +42,7 @@ $query = mysqli_query($koneksi, $sql);
 				<td><?= $barang["stok"] ?></td>
 				<td><?= $barang["harga_beli"] ?></td>
 				<td><?= $barang["harga_jual"] ?></td>
-				<td><?= $barang["create_at"] ?></td>
+				<td><?= $barang["created_at"] ?></td>
 				<td><?= $barang["updated_at"] ?></td>
 				<td>
 					<form action="read-barang.php" method="GET">

@@ -12,7 +12,7 @@
 		<li>MASTER
 			<ul>
 				<?php if ($_SESSION["level"] == "admin") : ?>
-				<li><a href="user.php">USER</a></li>
+				<li><a href="user.php">User</a></li>
 			<?php endif ?>
 			<li><a href="barang.php">Barang</a></li>
 			</ul>
